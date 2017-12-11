@@ -244,3 +244,6 @@ ul.iconlinks li a:hover {
   display: block;
 }
 
+.widget {
+  padding-right: 0;
+}
