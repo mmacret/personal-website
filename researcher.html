@@ -116,14 +116,17 @@
         </div>
         <!--pay attention-->
         <div class="col-lg-3 col-sm-3">
-            <img class="img-thumbnail img-responsive" src="media/modFM.png" height="140" width="140" alt="sfu">
+            <img class="img-thumbnail img-responsive" src="media/logo-pd-vanilla.png" height="140" width="140"
+                 alt="sfu">
             <h2>Coevolutionary Cartesian Genetic Programming and Pure Data</h2>
             <p><a href="https://puredata.info" target="_Blank"><span style="white-space: nowrap;">Pure Data</span></a>
                 is a visual programming language that enables musicians and sound designers to create synthesizer
                 software graphically, without writing lines of code.</p>
             <p>With <a href="http://www.cartesiangp.co.uk" target="_Blank">Coevolutionary Cartesian Genetic
                 Programming</a>, we evolve Pure Data patches that can be used to synthesize a large range of sounds.
-            <p><a class="btn btn-default" href="#modFM">More details &raquo;</a></p>
+                Our system was finalist of the <a href="http://www.human-competitive.org/awards" target="_Blank">Human-Competitive
+                    Awards 2017</a>!
+            <p><a class="btn btn-default" href="#cgp">More details &raquo;</a></p>
         </div>
         <div class="col-lg-3 col-sm-3">
             <img class="img-thumbnail img-responsive" src="media/modFM.png" height="140" width="140" alt="sfu">
@@ -164,6 +167,71 @@
         <!--pay attention-->
     </div>
     <div class="row">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div id="cgp" class="anchor col-md-7">
+                <h2 class="featurette-heading">Coevolutionary Cartesian Genetic Programming and Pure Data - <span
+                        class="text-muted">GECCO 2014 & 2017, Journal of New Music 2016</span>
+                </h2>
+                <p class="lead"> A sound synthesizer can be defined as a program that takes a few input parameters and returns a sound.
+                    The general sound synthesis problem could then be formulated as: given a sound (or a set of sounds) what
+                    program and set of input parameters can generate that sound (set of sounds)?</p>
+                <p class="lead">
+                    We propose a novel approach
+                    to tackle this problem in which we represent sound synthesizers using Pure Data (Pd), a graphic
+                    programming language for digital signal processing. We search the space of possible sound synthesizers
+                    using Coevolutionary Mixed-typed Cartesian Genetic Programming (MT-CGP), and the set of input parameters
+                    using a standard Genetic Algorithm (GA).</p>
+                <p class="lead">The proposed algorithm coevolves a population of MT-CGP graphs,
+                    representing the functional forms of synthesizers, and a population of GA chromosomes, representing
+                    their inputs parameters. A fitness function based on the Mel-frequency Cepstral Coefficients (MFCC)
+                    evaluates the distance between the target and produced sounds. Our approach is capable of suggesting
+                    novel functional forms and input parameters, suitable to approximate a given target sound (and we hope
+                    in future iterations a set of sounds). Since the resulting synthesizers are presented as Pd patches, the
+                    user can experiment, interact with, and reuse them.
+                </p>
+            </div>
+            <div class="col-md-5">
+
+                <img class="featurette-image img-responsive" src="media/cgp.png" height=500 width=500
+                     alt="fitness landscape">
+                <div class="table-responsive ">
+                    <table class="table">
+                        <th>
+                        <td colspan="2"><b>Sound examples</b></td>
+                        </th>
+                        <tr>
+                            <td>Target sound (clarinet)</td>
+                            <td>
+                                <audio class="responsive" src="./media/BbClar.pp.C5B5.wav" controls="controls"
+                                       type="audio/wav" title="target sound"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>modFM synthesized sound with GA</td>
+                            <td>
+                                <audio class="responsive" src="./media/BbClar_modFM.wav" controls="controls"
+                                       type="audio/wav" title="best candidate"></audio>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-default btn-sm" href="https://dl.acm.org/citation.cfm?id=2598303" target="_Blank">GECCO</a>
+                    <a class="btn btn-default btn-sm"
+                       href="http://www.tandfonline.com/doi/abs/10.1080/09298215.2016.1175481"
+                       target="_Blank">Journal</a>
+                    <a class="btn btn-default btn-sm" href="bibtex/macret-GECCO2014.bib" target="_Blank">BIB</a>
+                    <a class="btn btn-default btn-sm"
+                       href="https://www.slideshare.net/matthieumacret/automatic-design-of-sound-synthesizers-as-pure-data-patches-using-coevolutionary-mixedtyped-cartesian-genetic-programming"
+                       target="_Blank">Slides</a>
+                    <a class="btn btn-default btn-sm" href="http://metacreation.net/PresetGen/index.html"
+                       target="_Blank">Website</a>
+                </div>
+            </div>
+        </div>
+
         <hr class="featurette-divider">
 
         <div class="row featurette">
