@@ -94,7 +94,23 @@
                         researcher.</p>
                 </div>
                 <!--pay attention-->
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-3 col-sm-3">
+                    <h2>Countdown to citizenship</h2>
+                    <p>
+                        As an immigrant to Canada, I had to fill so many application forms. One of the most tedious form
+                        to fill is the travel form where you have to list all the countries you have been to in the last
+                        10 years... </p>
+                    <p>
+                        After spending hours, trying to cross-check my passport stamps, flight invoice and google
+                        timeline, I realize I could automate part of this tedious process by analyzing my Google
+                        location history. That is how <a
+                            href="https://countdowntocitizenship.com/" target="_Blank"><span
+                            style="white-space: nowrap;">countdowntocitizenship.com</span></a> was born!
+                    <p>
+                        <a class="btn btn-default" href="#countdown">More details &raquo;</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-sm-3">
                     <h2>Artificial Intelligence</h2>
                     <p>
                         I studied the theory and implementation of a large range of articial intelligence methods
@@ -108,7 +124,7 @@
                         <a class="btn btn-default" href="#ai">More details &raquo;</a>
                     </p>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-3 col-sm-3">
                     <h2>Knowledge Visualization</h2>
                     <p>I learnt how humans perceive information from different visualization approaches and how we can
                         best communicate the information and the concepts represented. Coupled to a strong statistical
@@ -120,7 +136,7 @@
                         <a class="btn btn-default" href="#viz">More details &raquo;</a>
                     </p>
                 </div>
-                <div class="col-lg-4 col-sm-4">
+                <div class="col-lg-3 col-sm-3">
                     <h2>Interaction design and user experience</h2>
                     <p>I studied diverse computer interaction forms including: direct physical interaction, embodied
                         interaction and embedded interaction and their implementation using interactive technologies
@@ -133,6 +149,45 @@
                 </div>
                 <!--pay attention-->
             </div>
+        </div>
+        <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="media/countdowntocitizenship.png" height=500 width=500
+                     alt="fitness landscape">
+            </div>
+            <div id="countdown" class="anchor col-md-7">
+                <h2 class="featurette-heading">
+                    Countdown to Citizenship
+                </h2>
+                <p class="lead">Countdown to Citizenship is a tool to help count down absences from Canada using
+                    collected Google Location History data. I started off this project using an open source project
+                    from <a style="white-space: nowrap;"
+                            href="https://github.com/theopolisme/location-history-visualizer" target="_Blank">location-history-visualizer.com</a>.
+                    The challenge with this project was dealing with large amount of location data and do all the
+                    processing and
+                    visualization browser side (for privacy reasons).
+                </p>
+
+                <p class="lead"> I kept the JSON streaming library,<a style="white-space: nowrap;"
+                                                                      href="http://oboejs.com/"
+                                                                      target="_Blank">Oboe.js</a>, used by the original
+                    project. I used a polygon
+                    from
+                    to represent Canada and use the <a style="white-space: nowrap;"
+                                                   href="https://en.wikipedia.org/wiki/Point_in_polygon#Ray_casting_algorithm"
+                                                   target="_Blank">Ray Casting Algorithm</a> to check if each latitude/longitude pairs were inside or
+                    outside the polygon. Using this technique I was able to detect and record absences from Canada. As a
+                    post-processing step, I reuse the same technique to reverse-geocode the absences.
+                </p>
+                <p class="lead">The absences are also visualized in real time (using promises) as snaking polylines on a
+                    map using <a style="white-space: nowrap;"
+                                 href="http://leafletjs.com/"
+                                 target="_Blank">Leaflet.js</a> and on a table.
+                </p>
+                <a class="btn btn-default btn-sm" href="https://countdowntocitizenship.com/" target="_Blank">Website</a>
+            </div>
+
         </div>
         <hr class="featurette-divider">
         <div class="row featurette">
