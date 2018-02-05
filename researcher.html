@@ -110,11 +110,25 @@
                 problem. Given a target sound, it can be difficult and tedious to find the right set parameters to
                 re-synthesize it with a given synthesizer. It is even more complex to come up with a new synthesis
                 techniques able to synthesize it.</h1>
-            <p class="lead">I explored how Evolutionary Computation can be used to automatize this task. I published and
-                presented several papers in international conferences and recently defended my M.Sc. thesis about this
+            <p class="lead">I explored how Evolutionary Computation can be used to automatize this task. I published
+                several papers in international conferences and journals and defended my M.Sc. thesis about this
                 topic.</p>
         </div>
         <!--pay attention-->
+        <div class="col-lg-3 col-sm-3">
+            <img class="img-thumbnail img-responsive" src="media/TE.png" height="140" width="140" alt="lifl">
+            <h2>Genetic Algorithms and OP-1</h2>
+            <p>The OP-1 is a popular commercial synthesizer designed by the Sweedish company: <a
+                    href="http://now.teenageengineering.com" target="_Blank"><span style="white-space: nowrap;">Teenage Engineering (TE)</span></a>.
+                The OP-1 contains several synthesis engines, effects and low frequency oscillators, which make the
+                parameters search space very large and discontinuous.
+            <p>In collaboration with TE, we address the problem of automatically calibrating the parameters of the OP-1
+                to approximate a given target sound using a multi-objective genetic algorithm. </p>
+            <p>Our system was finalist of
+                the <a href="http://www.human-competitive.org/awards" target="_Blank">Human-Competitive
+                    Awards 2017</a> at GECCO!</p>
+            <p><a class="btn btn-default" href="#op1">More details &raquo;</a></p>
+        </div>
         <div class="col-lg-3 col-sm-3">
             <img class="img-thumbnail img-responsive" src="media/logo-pd-vanilla.png" height="140" width="140"
                  alt="sfu">
@@ -124,8 +138,6 @@
                 software graphically, without writing lines of code.</p>
             <p>With <a href="http://www.cartesiangp.co.uk" target="_Blank">Coevolutionary Cartesian Genetic
                 Programming</a>, we evolve Pure Data patches that can be used to synthesize a large range of sounds.
-                Our system was finalist of the <a href="http://www.human-competitive.org/awards" target="_Blank">Human-Competitive
-                    Awards 2017</a>!
             <p><a class="btn btn-default" href="#cgp">More details &raquo;</a></p>
         </div>
         <div class="col-lg-3 col-sm-3">
@@ -152,17 +164,7 @@
                 performances.</p>
             <p><a class="btn btn-default" href="#freepad">More details &raquo;</a></p>
         </div>
-        <div class="col-lg-3 col-sm-3">
-            <img class="img-thumbnail img-responsive" src="media/TE.png" height="140" width="140" alt="lifl">
-            <h2>Genetic Algorithms and OP-1</h2>
-            <p>The OP-1 is a popular commercial synthesizer designed by the Sweedish company: <a
-                    href="http://now.teenageengineering.com" target="_Blank"><span style="white-space: nowrap;">Teenage Engineering (TE)</span></a>.
-                The OP-1 contains several synthesis engines, effects and low frequency oscillators, which make the
-                parameters search space very large and discontinuous.
-            <p>In collaboration with TE, we address the problem of automatically calibrating the parameters of the OP-1
-                to approximate a given target sound using a multi-objective genetic algorithm.</p>
-            <p><a class="btn btn-default" href="#op1">More details &raquo;</a></p>
-        </div>
+
 
         <!--pay attention-->
     </div>
@@ -170,9 +172,111 @@
         <hr class="featurette-divider">
 
         <div class="row featurette">
+            <div id="op1" class="anchor col-md-7">
+                <h2 class="featurette-heading">Genetic Algorithms and OP-1 - <span class="text-muted">SMC 2013, GECCO 2017, Journal of New Music 2016</span>
+                </h2>
+                <p class="lead">Calibrating a sound synthesizer to replicate or approximate a given target sound is a
+                    complex and time consuming task for musicians and sound designers. In the case of the OP1,
+                    a commercial synthesizer developed by <a href="http://now.teenageengineering.com"
+                                                             target="_Blank"><span style="white-space: nowrap;">Teenage Engineering</span></a>,
+                    the difficulty is multiple. The OP-1 contains several synthesis engines, effects and low frequency
+                    oscillators, which make the parameters search space very large and discontinuous. Furthermore,
+                    interactions between parameters are common and the OP-1 is not fully deterministic.</p>
+                <p class="lead">We address the problem of automatically calibrating the parameters of the OP-1 to
+                    approximate a given target
+                    sound. We propose and evaluate a solution to this problem using a multi-objective
+                    Non-dominated-Sorting-Genetic-
+                    Algorithm-II. We show that our approach makes it possible to handle the problem complexity, and
+                    returns a small set of presets that best approximate the target sound while covering the Pareto
+                    front of this multi-objective optimization
+                    problem.</p>
+                <div class="btn-group">
+                    <a class="btn btn-default btn-sm" href="pdf/SMC2013_MACRET.pdf" target="_Blank">SMC</a>
+                    <a class="btn btn-default btn-sm" href="http://www.human-competitive.org/awards" target="_Blank">GECCO</a>
+                    <a class="btn btn-default btn-sm"
+                       href="http://www.tandfonline.com/doi/abs/10.1080/09298215.2016.1175481"
+                       target="_Blank">Journal</a>
+                    <a class="btn btn-default btn-sm" href="bibtex/macret-SMC2013.bib" target="_Blank">BIB</a>
+                    <a class="btn btn-default btn-sm"
+                       href="http://www.slideshare.net/matthieumacret/thesis-defense-27115161" target="_Blank">Slides</a>
+                    <a class="btn btn-default btn-sm" href="pdf/SMC2013_MACRET_poster.pdf" target="_Blank">Poster</a>
+                    <a class="btn btn-default btn-sm" href="http://metacreation.net/PresetGen/index.html" target="_Blank">Website</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive" src="media/te_op1.png" height=500 width=500
+                     alt="Renault Simulator">
+                <div class="table-responsive ">
+                    <table class="table">
+                        <thead>
+                        <th>
+                        <td colspan="2"><b>Sound examples</b></td>
+                        </th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Target sound (cat meow)</td>
+                            <td>
+                                <audio class="responsive" src="./media/cat.wav" controls="controls" type="audio/wav"
+                                       title="target sound"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>OP-1 synthesized sound with GA</td>
+                            <td>
+                                <audio class="responsive" src="./media/cat_op1.wav" controls="controls" type="audio/wav"
+                                       title="best candidate"></audio>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-5">
+
+                <img class="featurette-image img-responsive" src="media/cgp.png" height=500 width=500
+                     alt="fitness landscape">
+                <div class="table-responsive ">
+                    <table class="table">
+                        <tr>
+                        <th colspan="3" style="text-align:center"><b>Sound examples</b></th>
+                        </tr>
+                        <tr>
+                            <td>Target sound (clarinet)</td>
+                            <td colspan="2">
+                                <audio class="responsive" style="width:100%" src="./media/BbClar.pp.C5B5.wav" controls="controls"
+                                       type="audio/wav" title="target sound"></audio>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Synthesized sound with Pd and CGP</td>
+                            <td>
+                                <audio class="responsive" src="http://metacreation.net/mmacret/GECCO2014/clarinet/best.wav" controls="controls"
+                                       type="audio/wav" title="best candidate"></audio>
+                            </td>
+                            <td>
+                                <a class="btn btn-default btn-sm" href="http://metacreation.net/mmacret/GECCO2014/clarinet/best.pd" target="_Blank" download>Pd patch</a>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-group">
+                    <a class="btn btn-default btn-sm" href="https://dl.acm.org/citation.cfm?id=2598303" target="_Blank">GECCO</a>
+                    <a class="btn btn-default btn-sm" href="bibtex/macret-GECCO2014.bib" target="_Blank">BIB</a>
+                    <a class="btn btn-default btn-sm"
+                       href="https://www.slideshare.net/matthieumacret/automatic-design-of-sound-synthesizers-as-pure-data-patches-using-coevolutionary-mixedtyped-cartesian-genetic-programming"
+                       target="_Blank">Slides</a>
+                    <a class="btn btn-default btn-sm" href="http://metacreation.net/mmacret/GECCO2014/"
+                       target="_Blank">Website</a>
+                </div>
+            </div>
             <div id="cgp" class="anchor col-md-7">
                 <h2 class="featurette-heading">Coevolutionary Cartesian Genetic Programming and Pure Data - <span
-                        class="text-muted">GECCO 2014 & 2017, Journal of New Music 2016</span>
+                        class="text-muted">GECCO 2014</span>
                 </h2>
                 <p class="lead"> A sound synthesizer can be defined as a program that takes a few input parameters and returns a sound.
                     The general sound synthesis problem could then be formulated as: given a sound (or a set of sounds) what
@@ -192,44 +296,7 @@
                     user can experiment, interact with, and reuse them.
                 </p>
             </div>
-            <div class="col-md-5">
 
-                <img class="featurette-image img-responsive" src="media/cgp.png" height=500 width=500
-                     alt="fitness landscape">
-                <div class="table-responsive ">
-                    <table class="table">
-                        <th>
-                        <td colspan="2"><b>Sound examples</b></td>
-                        </th>
-                        <tr>
-                            <td>Target sound (clarinet)</td>
-                            <td>
-                                <audio class="responsive" src="./media/BbClar.pp.C5B5.wav" controls="controls"
-                                       type="audio/wav" title="target sound"></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>modFM synthesized sound with GA</td>
-                            <td>
-                                <audio class="responsive" src="./media/BbClar_modFM.wav" controls="controls"
-                                       type="audio/wav" title="best candidate"></audio>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="btn-group">
-                    <a class="btn btn-default btn-sm" href="https://dl.acm.org/citation.cfm?id=2598303" target="_Blank">GECCO</a>
-                    <a class="btn btn-default btn-sm"
-                       href="http://www.tandfonline.com/doi/abs/10.1080/09298215.2016.1175481"
-                       target="_Blank">Journal</a>
-                    <a class="btn btn-default btn-sm" href="bibtex/macret-GECCO2014.bib" target="_Blank">BIB</a>
-                    <a class="btn btn-default btn-sm"
-                       href="https://www.slideshare.net/matthieumacret/automatic-design-of-sound-synthesizers-as-pure-data-patches-using-coevolutionary-mixedtyped-cartesian-genetic-programming"
-                       target="_Blank">Slides</a>
-                    <a class="btn btn-default btn-sm" href="http://metacreation.net/PresetGen/index.html"
-                       target="_Blank">Website</a>
-                </div>
-            </div>
         </div>
 
         <hr class="featurette-divider">
@@ -324,66 +391,9 @@
             </div>
         </div>
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div id="op1" class="anchor col-md-7">
-                <h2 class="featurette-heading">Genetic Algorithms and OP-1 - <span class="text-muted">SMC 2013</span>
-                </h2>
-                <p class="lead">Calibrating a sound synthesizer to replicate or approximate a given target sound is a
-                    complex and time consuming task for musicians and sound designers. In the case of the OP1,
-                    a commercial synthesizer developed by <a href="http://now.teenageengineering.com"
-                                                             target="_Blank"><span style="white-space: nowrap;">Teenage Engineering</span></a>,
-                    the difficulty is multiple. The OP-1 contains several synthesis engines, effects and low frequency
-                    oscillators, which make the parameters search space very large and discontinuous. Furthermore,
-                    interactions between parameters are common and the OP-1 is not fully deterministic.</p>
-                <p class="lead">We address the problem of automatically calibrating the parameters of the OP-1 to
-                    approximate a given target
-                    sound. We propose and evaluate a solution to this problem using a multi-objective
-                    Non-dominated-Sorting-Genetic-
-                    Algorithm-II. We show that our approach makes it possible to handle the problem complexity, and
-                    returns a small set of presets that best approximate the target sound while covering the Pareto
-                    front of this multi-objective optimization
-                    problem.</p>
-                <div class="btn-group">
-                    <a class="btn btn-default btn-sm" href="pdf/SMC2013_MACRET.pdf">PDF</a>
-                    <a class="btn btn-default btn-sm" href="bibtex/macret-SMC2013.bib">BIB</a>
-                    <a class="btn btn-default btn-sm"
-                       href="http://www.slideshare.net/matthieumacret/thesis-defense-27115161">Slides</a>
-                    <a class="btn btn-default btn-sm" href="pdf/SMC2013_MACRET_poster.pdf">Poster</a>
-                    <a class="btn btn-default btn-sm" href="http://metacreation.net/mmacret/SMC2013/">Website</a>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <img class="featurette-image img-responsive" src="media/te_op1.png" height=500 width=500
-                     alt="Renault Simulator">
-                <div class="table-responsive ">
-                    <table class="table">
-                        <thead>
-                        <th>
-                        <td colspan="2"><b>Sound examples</b></td>
-                        </th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Target sound (cat meow)</td>
-                            <td>
-                                <audio class="responsive" src="./media/cat.wav" controls="controls" type="audio/wav"
-                                       title="target sound"></audio>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>OP-1 synthesized sound with GA</td>
-                            <td>
-                                <audio class="responsive" src="./media/cat_op1.wav" controls="controls" type="audio/wav"
-                                       title="best candidate"></audio>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
 
-            </div>
+
         </div>
 
 
